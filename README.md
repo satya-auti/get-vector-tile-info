@@ -14,11 +14,12 @@ Clone this repository and run npm install
 
 <img alt="image" width="560" src="media/img-a.png">
 
+<img alt="image" width="360" src="media/img-d.png">
+
 <img alt="image" src="media/img-b.png">
 
 <img alt="image" src="media/img-c.png">
 
-<img alt="image" src="media/img-d.png">
 
 <hr>
 
