@@ -12,7 +12,7 @@ Clone this repository and run npm install
 
 <h3> Output files</h3>
 
-<img alt="image" width="500" src="media/img-a.png"> <img alt="image" height="600" width="300" src="media/img-d.png">
+<img alt="image" width="500"  height="700" src="media/img-a.png"> <img alt="image" height="700" width="300" src="media/img-d.png">
 
 <img alt="image" width="400" src="media/img-b.png"> <img alt="image" width="350" src="media/img-c.png">
 
