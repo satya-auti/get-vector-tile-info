@@ -12,7 +12,7 @@ Clone this repository and run npm install
 
 <h1>How to run</h1>
 ```
- node <filepath>/<filename>
+ node {filepath}/{filename}
 ```
 
 ```
