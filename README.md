@@ -4,6 +4,8 @@ Get vector tile total features count in different ways and detailed info on whic
 
 <h1>Installation</h1>
 Clone this repository and run npm install
+
+
 ```
 npm install
 ```
