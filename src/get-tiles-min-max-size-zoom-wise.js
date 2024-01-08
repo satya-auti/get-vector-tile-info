@@ -44,8 +44,7 @@ function readMBTiles(mbtilesPath) {
 }
 
 // Replace 'path/to/your/file.mbtiles' with the actual path to your MBTiles file
-// const mbtilesPath = 'planet.mbtiles';
-const mbtilesPath = 'mbtiles.mbtiles';
+const mbtilesPath = 'input/planet.mbtiles';
 
 const sortedTiles = [];
 
@@ -56,7 +55,7 @@ readMBTiles(mbtilesPath)
 
     const writeData = async (csvData) => {
       try {
-        writeFileSync('get_tiles_min_max_size_zoom_wise.csv', csvData, {
+        writeFileSync('output/get_tiles_min_max_size_zoom_wise.csv', csvData, {
           flag: 'a+',
         });
       } catch (error) {
