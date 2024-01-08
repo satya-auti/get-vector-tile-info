@@ -20,7 +20,7 @@ function readMBTiles(mbtilesPath) {
         metadata[row.name] = row.value;
       });
 
-      // Read tile data from the database
+      // get tile data from the database
       const tiles = [];
       //   get data order by zoom_level, tile_column, tile_row
       db.each(
@@ -47,8 +47,7 @@ function readMBTiles(mbtilesPath) {
 }
 
 // Replace 'path/to/your/file.mbtiles' with the actual path to your MBTiles file
-// const mbtilesPath = 'planet.mbtiles';
-const mbtilesPath = 'mbtiles.mbtiles';
+const mbtilesPath = 'input/planet.mbtiles';
 
 readMBTiles(mbtilesPath)
   .then(({ metadata, tiles }) => {
@@ -58,7 +57,7 @@ readMBTiles(mbtilesPath)
     // Write data to CSV file
     const writeData = async (csvData) => {
       try {
-        writeFileSync('total_features_per_tile.csv', csvData, { flag: 'a+' });
+        writeFileSync('output/total_features_per_tile.csv', csvData, { flag: 'a+' });
       } catch (error) {
         console.error('Error writing data', error);
       }
