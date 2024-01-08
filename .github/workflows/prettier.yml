@@ -1,0 +1,30 @@
+name: Continuous Integration
+
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  prettier_check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: '${{ github.head_ref }}'
+          persist-credentials: false
+
+      - name: Check code formatting
+        run: |
+          changed_files=$(git diff --name-only HEAD^)
+          for file in $changed_files; do
+            if [[ $file == *.js || $file == *.md ]]; then
+              prettier_check=$(npx prettier --check $file)
+              if [[ $? -ne 0 ]]; then
+                echo "Code formatting required for $file"
+                exit 1
+              fi
+            fi
+          done
