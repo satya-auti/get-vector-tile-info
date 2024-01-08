@@ -10,11 +10,11 @@ Clone this repository and run npm install
 
  Also user can get the total features per zoom level, layer-wise total features, the total no of features per tile, get the min and max size of tiles per zoom level.
 
-	<img width="302" alt="image" src="https://github.com/satya-auti/get-vector-tile-info/assets/103890980/ec35d6b3-684f-448a-8ea8-cbbbe3e9fea8">
+<img width="302" alt="image" src="https://github.com/satya-auti/get-vector-tile-info/assets/103890980/ec35d6b3-684f-448a-8ea8-cbbbe3e9fea8">
 
-	<img width="235" alt="image" src="https://github.com/satya-auti/get-vector-tile-info/assets/103890980/37eaa8a0-6e22-4b76-a543-e50819623a6d">
+<img width="235" alt="image" src="https://github.com/satya-auti/get-vector-tile-info/assets/103890980/37eaa8a0-6e22-4b76-a543-e50819623a6d">
 
-	<img width="536" alt="image" src="https://github.com/satya-auti/get-vector-tile-info/assets/103890980/0b504f2a-6152-43a6-9f05-489df52d68aa">
+<img width="536" alt="image" src="https://github.com/satya-auti/get-vector-tile-info/assets/103890980/0b504f2a-6152-43a6-9f05-489df52d68aa">
 
 
 <h1>How to run</h1>
