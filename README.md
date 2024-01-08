@@ -3,8 +3,7 @@
 Get vector tile total features count in different ways and detailed info on which tile is exceeding its size.
 
 <h1>Installation</h1>
-Clone this repository and run npm install
-
+Clone this repository and run npm install.
 
 ```
 npm install
