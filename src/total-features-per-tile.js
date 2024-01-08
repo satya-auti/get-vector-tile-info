@@ -1,8 +1,8 @@
-import zlib  from 'zlib';
-import Pbf from 'pbf';
-import { VectorTile } from '@mapbox/vector-tile';
-import { writeFileSync } from 'fs';
-import sqlite3 from 'sqlite3';
+import zlib from "zlib";
+import Pbf from "pbf";
+import { VectorTile } from "@mapbox/vector-tile";
+import { writeFileSync } from "fs";
+import sqlite3 from "sqlite3";
 
 function readMBTiles(mbtilesPath) {
   return new Promise((resolve, reject) => {
@@ -12,7 +12,7 @@ function readMBTiles(mbtilesPath) {
       const metadata = {};
 
       // Read metadata from the database
-      db.each('SELECT name, value FROM metadata', (err, row) => {
+      db.each("SELECT name, value FROM metadata", (err, row) => {
         if (err) {
           reject(err);
           return;
@@ -24,7 +24,7 @@ function readMBTiles(mbtilesPath) {
       const tiles = [];
       //   get data order by zoom_level, tile_column, tile_row
       db.each(
-        'SELECT zoom_level, tile_column, tile_row, tile_data FROM tiles ORDER BY zoom_level,tile_column,tile_row ASC',
+        "SELECT zoom_level, tile_column, tile_row, tile_data FROM tiles ORDER BY zoom_level,tile_column,tile_row ASC",
         (err, row) => {
           if (err) {
             reject(err);
@@ -47,19 +47,21 @@ function readMBTiles(mbtilesPath) {
 }
 
 // Replace 'path/to/your/file.mbtiles' with the actual path to your MBTiles file
-const mbtilesPath = 'input/planet.mbtiles';
+const mbtilesPath = "input/planet.mbtiles";
 
 readMBTiles(mbtilesPath)
   .then(({ metadata, tiles }) => {
-    console.log('Metadata:', metadata);
-    console.log('tile length', tiles.length);
+    console.log("Metadata:", metadata);
+    console.log("tile length", tiles.length);
 
     // Write data to CSV file
     const writeData = async (csvData) => {
       try {
-        writeFileSync('output/total_features_per_tile.csv', csvData, { flag: 'a+' });
+        writeFileSync("output/total_features_per_tile.csv", csvData, {
+          flag: "a+",
+        });
       } catch (error) {
-        console.error('Error writing data', error);
+        console.error("Error writing data", error);
       }
     };
 
@@ -84,7 +86,7 @@ readMBTiles(mbtilesPath)
       return new Promise((resolve, reject) => {
         zlib.gunzip(data, (err, buffer) => {
           if (err) {
-            console.log('zlib error', err.message);
+            console.log("zlib error", err.message);
             reject(err);
             return;
           }
@@ -110,10 +112,10 @@ readMBTiles(mbtilesPath)
 
     processTiles()
       .then(() => {
-        console.log('CSV file written successfully!');
+        console.log("CSV file written successfully!");
       })
       .catch((error) => {
-        console.error('Error:', error);
+        console.error("Error:", error);
       });
   })
-  .catch((error) => console.error('Error:', error));
+  .catch((error) => console.error("Error:", error));
