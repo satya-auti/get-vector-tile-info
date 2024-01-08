@@ -12,13 +12,13 @@ Clone this repository and run npm install
 
 <h3> Output files</h3>
 
-<img alt="image" src="media/img-a.png>
+<img alt="image" src="media/img-a.png">
 
-<img alt="image" src="media/img-b.png>
+<img alt="image" src="media/img-b.png">
 
-<img alt="image" src="media/img-c.png>
+<img alt="image" src="media/img-c.png">
 
-<img alt="image" src="media/img-d.png>
+<img alt="image" src="media/img-d.png">
 
 <hr>
 
