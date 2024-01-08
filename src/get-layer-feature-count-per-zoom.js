@@ -46,15 +46,14 @@ function readMBTiles(mbtilesPath) {
 }
 const featureLayerCountData = [];
 const layerWiseData = [];
-// const mbtilesPath = 'pune_1.mbtiles';
-const mbtilesPath = 'mbtiles.mbtiles';
+const mbtilesPath = 'input/planet.mbtiles';
 
 
 readMBTiles(mbtilesPath)
   .then(({ metadata, tiles }) => {
     const writeData = async (csvData) => {
       try {
-        writeFileSync('get_layer_feature_count_per_zoom.csv', csvData, {
+        writeFileSync('output/get_layer_feature_count_per_zoom.csv', csvData, {
           flag: 'a+',
         });
       } catch (error) {

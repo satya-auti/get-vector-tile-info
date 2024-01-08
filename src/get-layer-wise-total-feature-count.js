@@ -46,12 +46,11 @@ function readMBTiles(mbtilesPath) {
 }
 
 // Replace 'path/to/your/file.mbtiles' with the actual path to your MBTiles file
-const mbtilesPath = 'mbtiles.mbtiles';
-
-// const mbtilesPath = 'planet.mbtiles';
+const mbtilesPath = 'input/planet.mbtiles';
 const allData = [];
 const allDataDummy = [];
 
+// read mbtiles
 readMBTiles(mbtilesPath)
   .then(({ metadata, tiles }) => {
     console.log('Metadata:', metadata);
@@ -59,7 +58,7 @@ readMBTiles(mbtilesPath)
 
     const writeData = async (csvData) => {
       try {
-        writeFileSync('get_layer_wise_total_feature_count.csv', csvData, {
+        writeFileSync('output/get_layer_wise_total_feature_count.csv', csvData, {
           flag: 'a+',
         });
       } catch (error) {
