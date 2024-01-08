@@ -1,0 +1,17 @@
+layer_name, total_features
+transportation, 128123
+landuse, 14467
+place, 6596
+landcover, 9394
+water, 6170
+boundary, 2930
+waterway, 4972
+transportation_name, 126033
+aerodrome_label, 28
+mountain_peak, 260
+aeroway, 625
+park, 139
+poi, 780732
+building, 456419
+water_name, 3234
+housenumber, 1110
