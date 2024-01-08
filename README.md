@@ -10,13 +10,23 @@ Clone this repository and run npm install
 
  Also user can get the total features per zoom level, layer-wise total features, the total no of features per tile, get the min and max size of tiles per zoom level.
 
- <h1>How to run</h1>
- ```
+<h1>How to run</h1>
+```
  node <filepath>/<filename>
 ```
-	 .
+
+```
+node src/total-features-per-tile.js
+```
 	 
 ```
 node src/get-layer-feature-count-per-zoom.js
 ```
+
+```
+node src/get-tiles-min-max-size-zoom-wise.js
+```
  
+```
+node src/get-layer-wise-total-feature-count.js
+```
