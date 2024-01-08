@@ -4,7 +4,9 @@ Get vector tile total features count in different ways and detailed info on whic
 
 <h1>Installation</h1>
 Clone this repository and run npm install
-``` npm install ```
+```
+npm install
+```
 
 <h1>Usage</h1>
  Examining a vector tile to determine whether it complies with Mapbox's suggested maximum tile size of 500 KB and average tile size of 50 KB.
