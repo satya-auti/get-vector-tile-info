@@ -1,4 +1,4 @@
-# get-vector-tile-info
+# Get vector tile info
 
 Get vector tile total features count in different ways and detailed info on which tile is exceeding its size.
 
