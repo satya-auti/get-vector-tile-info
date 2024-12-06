@@ -18,7 +18,7 @@
     "@mapbox/vector-tile": "^2.0.1",
     "fs": "0.0.1-security",
     "pbf": "^4.0.1",
-    "prettier": "^3.3.3",
+    "prettier": "^3.4.2",
     "sqlite3": "^5.1.0",
     "zlib": "^1.0.5"
   }
